@@ -30,7 +30,7 @@ public class OrderItemsReserverFunction {
         ObjectMapper objectMapper = new ObjectMapper();
         String orderRequestJson = objectMapper.writeValueAsString(requestBody);
 
-        String connectionString = "DefaultEndpointsProtocol=https;AccountName=petstorestorage;AccountKey=AMrnCr4iYwKssTmh5cPEWM7nJ2W6riyUK9tOMXChPz6Yp0K1jjueW1a/DU12Rfgsh5LccRyhLrUp+AStUVpjZQ==;EndpointSuffix=core.windows.net";
+        String connectionString = <your-storage-account-connection-string>;
         String containerName = "order-requests";
         JsonNode jsonNode = objectMapper.readTree(orderRequestJson);
         String sessionId = jsonNode.get("sessionId").asText();
